@@ -1,0 +1,51 @@
+Test assignment
+
+Thank you for participating in our recruiting test. This will be a C++ programming test!
+
+How to prepare for this test
+
+Install an editor and C++ compiler of your choice. Your solution will be compiled with GCC 7.2.0 (with -std=c++17), and you will have the chance to fix any compilation errors prior to submission. You may use the standard libraries for the task. It is not permitted to use other libraries, however you will not need them anyway.
+
+You are free in your choice of operating system and development environment. The task is a very general programming assignment testing general problem structuring and programming proficiency. The solution has to be submitted within a 9 hour time frame. Excellent C++ specialists often solve the problem in 3 to 4 hours, and we leave it to the candidates to test their solutions thoroughly before handing them in (in case they finish early).
+
+You must develop the solution yourself. You may not let others help you or search for existing solutions. Of course, you may use any documentation of the C++ language or the C++ Standard Library. Do not give your solution to others or make it public. It may entice others to send in plagiarized solutions, and thus make our recruiting less fair. If you use an online compiler, make sure that the privacy settings are set to private. Publishing the task description is also considered cheating and will void your application.
+
+The amount of code you need for a correct solution is relatively small, and you will spend most of the allocated time thinking rather than typing. We would like to receive the best solution you can come up with!
+
+Task Description
+
+interval_map<K,V> is a data structure that associates keys of type K with values of type V. It is designed to be used efficiently in situations where intervals of consecutive keys are associated with the same value. Your task is to implement the assign member function of this data structure, which is outlined below.
+
+interval_map<K, V> is implemented on top of std::map. For more information on std::map, you may refer to cppreference.com.
+
+Each key-value-pair (k,v) in interval_map<K,V>::m_map means that the value v is associated with all keys from k (including) to the next key (excluding) in m_map. The member interval_map<K,V>::m_valBegin holds the value that is associated with all keys less than the first key in m_map.
+
+Example: Let M be an instance of interval_map<int,char> where
+
+    M.m_valBegin=='A',
+    M.m_map=={ (1,'B'), (3,'A') },
+
+Then M represents the mapping
+
+    ...
+    -2 -> 'A'
+    -1 -> 'A'
+    0 -> 'A'
+    1 -> 'B'
+    2 -> 'B'
+    3 -> 'A'
+    4 -> 'A'
+    5 -> 'A'
+    ...
+
+The representation in the std::map must be canonical, that is, consecutive map entries must not contain the same value: ..., (3,'A'), (5,'A'), ... is not allowed. Likewise, the first entry in m_map must not contain the same value as m_valBegin. Initially, the whole range of K is associated with a given initial value, passed to the constructor of the interval_map<K,V> data structure.
+
+Key type K
+
+    besides being copyable and assignable, is less-than comparable via operator<, and
+    does not implement any other operations, in particular no equality comparison or arithmetic operators.
+
+Value type V
+
+    besides being copyable and assignable, is equality-comparable via operator==, and
+    does not implement any other operations.
