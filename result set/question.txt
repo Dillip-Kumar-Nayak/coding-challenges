@@ -1,0 +1,10 @@
+Interface ResultSet<T extends Comparable<T>> {
+
+Public void add(T start, T end);
+
+Public boolean test(T val);
+
+}
+
+ 
+Implement a class using the above interface, so that test and add method can run in O(log n).
