@@ -1,0 +1,8 @@
+The game Babylon is a two-player alternating-moves game - like tic-tac-toe, or chess, or go. It's played with twelve tiles: three each of four colors.
+
+    The tiles start out in 12 stacks of height 1.
+    A move consists of combining two stacks: putting one whole stack on top of another.
+    You are allowed to combine two stacks if either the heights match, or the top tile colors match.
+    You win if you are the last player to move. You lose if it's your turn and there are no moves.
+
+Write a program to answer the question: who wins, with perfect play? (The first or the second player?)
