@@ -1,0 +1,5 @@
+Given a series of task with start time and end time to a computer running a robot, need to tell whether the given task can be accepted and completed or should be rejected.
+
+a task will be rejected if there is any overlapping at that time.
+
+Try to solve in O(logn) time.
